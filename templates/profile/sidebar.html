@@ -1,0 +1,49 @@
+<div class="area"></div>
+<nav class="main-menu">
+    <ul class="main">
+        <li>
+            <a href="{% url 'profile' %}">
+                <i class="fa fa-home fa-2x"></i>
+                <span class="nav-text">
+                    홈
+                </span>
+            </a>
+          
+        </li>
+        <li>
+            <a href="#profile-sub-1">
+                <i class="fa fa-user fa-2x"></i>
+                <span class="nav-text">
+                    프로필
+                </span>
+            </a>
+        </li>
+        <li>
+           <a href="#profile-sub-2">
+               <i class="fa fa-table fa-2x"></i>
+                <span class="nav-text">
+                    예약 현황
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'password_change' %}">
+               <i class="fa fa-info fa-2x"></i>
+                <span class="nav-text">
+                    비밀번호 변경
+                </span>
+            </a>
+        </li>
+    </ul>
+
+    <ul class="logout">
+        <li>
+           <a href="{% url 'logout' %}">
+                 <i class="fa fa-power-off fa-2x"></i>
+                <span class="nav-text">
+                    Logout
+                </span>
+            </a>
+        </li>  
+    </ul>
+</nav>

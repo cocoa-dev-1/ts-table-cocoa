@@ -1,0 +1,30 @@
+{% load static %}
+<div class="profile-main">
+    <div id="profile-sub-1" class="profile-sub-1">
+        <img src="{% static 'img/default.png' %}">
+        <div class="profile-box">
+            <h1 class="profile-title">프로필</h1>
+            <div class="profile-des">이름: {{ user.real_name }}</div>
+            <div class="profile-des">직업: {{ user.type }}</div>
+            <div class="profile-des">Id(Email): {{ user.email }}</div>
+        </div>
+    </div>
+    <div id="profile-sub-2" class="profile-sub-2">
+        <h1>예약현황</h1>
+        <table class="profile-table">
+            <th style="width: 10%;">방</th>
+            <th style="width: 35%;">시작시간</th>
+            <th style="width: 35%;">끝나는 시간</th>
+            <th style="width: 20%;">상태</th>
+            {% for k in reservation %}
+                <tr>
+                    <td>{{k.room}}</td>
+                    <td>{{k.start_time}}</td>
+                    <td>{{k.end_time}}</td>
+                    <td>{{k.type}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        </div>
+    </div>
+</div>
